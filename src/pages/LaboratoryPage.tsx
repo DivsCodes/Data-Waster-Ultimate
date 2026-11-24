@@ -10,7 +10,6 @@ import { StatusPill } from '../components/ui/StatusPill';
 import {
   addNetworkEvent,
   calculateLatencyStats,
-  DEFAULT_LATENCY_ENDPOINT,
   fetchPublicIp,
   getBrowserNetworkSnapshot,
   inspectHttpHeaders,
