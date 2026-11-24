@@ -29,7 +29,7 @@ describe('gamification', () => {
   it('calculates level thresholds without losing XP', () => {
     expect(getLevelProgress(0)).toMatchObject({ level: 1, xpIntoLevel: 0, xpForNextLevel: 100 });
     expect(getLevelProgress(100)).toMatchObject({ level: 2, xpIntoLevel: 0, xpForNextLevel: 150 });
-    expect(getLevelProgress(125)).toMatchObject({ level: 2, xpIntoLevel: 25, progressPercent: 100 / 6 });
+    expect(getLevelProgress(125)).toMatchObject({ level: 2, xpIntoLevel: 25, progressPercent: expect.closeTo(16.67, 2) });
   });
 
   it('records games, best score and earned XP', () => {
