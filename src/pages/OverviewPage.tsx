@@ -100,7 +100,7 @@ export function OverviewPage() {
   const [targetInput, setTargetInput] = useState('1');
   const [targetUnit, setTargetUnit] = useState<TargetUnit>('GB');
   const [targetError, setTargetError] = useState<string | null>(null);
-  const [concurrency, setConcurrency] = useState(DOWNLOAD_LIMITS.defaultConcurrency);
+  const [concurrency, setConcurrency] = useState<number>(DOWNLOAD_LIMITS.defaultConcurrency);
   const [confirmedDataUse, setConfirmedDataUse] = useState(false);
   const [snapshot, setSnapshot] = useState<DownloadSnapshot>(() => emptySnapshot(1 * GIB));
   const [recentSessions, setRecentSessions] = useState<DownloadSessionRecord[]>(() => readSessions().slice(0, 3));
